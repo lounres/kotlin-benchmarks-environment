@@ -4,9 +4,11 @@ import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
     kotlin("multiplatform") version "2.0.0"
+    
     id("org.jetbrains.kotlinx.benchmark") version "0.4.11"
     id("org.jetbrains.kotlin.plugin.allopen") version "2.0.0"
     
+    id("com.github.johnrengelman.shadow") version "8.1.1"
     java
     application
 }
