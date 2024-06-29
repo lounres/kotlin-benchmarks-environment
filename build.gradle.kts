@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
     kotlin("multiplatform") version "2.0.0"
-    id("org.jetbrains.kotlinx.benchmark") version "0.4.10"
+    id("org.jetbrains.kotlinx.benchmark") version "0.4.11"
     id("org.jetbrains.kotlin.plugin.allopen") version "2.0.0"
     
     java
@@ -27,7 +27,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-benchmark-runtime:0.4.10")
+                implementation("org.jetbrains.kotlinx:kotlinx-benchmark-runtime:0.4.11")
             }
         }
     }
