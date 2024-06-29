@@ -36,3 +36,22 @@ kotlin {
 application {
     mainClass = "MainKt"
 }
+
+benchmark {
+    targets {
+        register("jvmMain")
+        register("wasmJsMain")
+    }
+    configurations {
+        named("main") {
+            warmups = 20
+            iterations = 10
+            iterationTime = 3
+            iterationTimeUnit = "s"
+        }
+    }
+}
+
+allOpen {
+    annotation("org.openjdk.jmh.annotations.State")
+}
